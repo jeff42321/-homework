@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "黑客松homework01", "黑�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temperature conversion", "temperature conversion\temperature conversion.csproj", "{2A11FF5E-8545-4CE9-B592-42A02176B05F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "count string lengths", "count string lengths\count string lengths.csproj", "{8403D29C-740A-4477-A6E5-7B4CA8B64CCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2A11FF5E-8545-4CE9-B592-42A02176B05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A11FF5E-8545-4CE9-B592-42A02176B05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A11FF5E-8545-4CE9-B592-42A02176B05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8403D29C-740A-4477-A6E5-7B4CA8B64CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8403D29C-740A-4477-A6E5-7B4CA8B64CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8403D29C-740A-4477-A6E5-7B4CA8B64CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8403D29C-740A-4477-A6E5-7B4CA8B64CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
