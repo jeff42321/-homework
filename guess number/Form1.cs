@@ -1,5 +1,7 @@
 using System;
 using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace guess_number
@@ -28,7 +30,7 @@ namespace guess_number
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (myList?.Count != null|| myList.Count == 0)
+            if (myList != null && myList.Count > 0)
             {
                 var Num1 = myList[0].RandomNum;
                 var Num2 = myList[1].RandomNum;
@@ -64,6 +66,7 @@ namespace guess_number
                     return false;
                 });
 
+
                 if (A == 4)
                 {
 
@@ -85,7 +88,7 @@ namespace guess_number
         private void button4_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
-            myList.Clear();
+            myList?.Clear();
             textBox1.Text = "";
             label3.Text = "";
 
