@@ -46,16 +46,17 @@ namespace guess_number
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (myList?.Count != null && textBox1.Text.Length == 4)
+            if (myList?.Count != null && textBox1.Text.Length == 4 && int.TryParse(textBox1.Text, out int result))
             {
                 int[] tex = textBox1.Text.Select(s => int.Parse(s.ToString())).ToArray();
                 MyDeta[] array = myList.ToArray();
+                //找出位置不一樣的數字
                 var differencesA = array.Select((value, index) =>
                 new { Index = index, Value1 = value.RandomNum, Value2 = tex.ElementAtOrDefault(index) })
                 .Where(x => x.Value1 != x.Value2).ToList();
                 var A = textBox1.Text.Length - differencesA.Count;
 
-                var differencesB = differencesA.Select(x => x.Value1).ToList();
+                var differencesB = differencesA.Select(x => x.Value1).ToList();//答案中位置錯誤的數字
                 int B = differencesA.Count(x =>
                 {
                     if (differencesB.Contains(x.Value2))
@@ -67,7 +68,7 @@ namespace guess_number
                 });
 
 
-                if (A == 4)
+                if (A == textBox1.Text.Length)
                 {
 
                     label3.Text += ("4A\n");
@@ -88,7 +89,7 @@ namespace guess_number
         private void button4_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
-            myList?.Clear();
+            myList.Clear();
             textBox1.Text = "";
             label3.Text = "";
 
