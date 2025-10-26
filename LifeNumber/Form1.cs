@@ -36,12 +36,12 @@ namespace LifeNumber
             int dateNumber = int.Parse(dateString);
 
             int sum = DigitalRoot(dateNumber);
-            string sign = GetZodiacSign(dt.Month, dt.Day);
+            string sign = Get(dt.Month, dt.Day);
 
             string resultText = Find(sign, sum);
             textBox1.Text = $"星座：{sign}\r\n你的生命靈數是：{sum}\r\n{resultText}";
         }
-        static string GetZodiacSign(int month, int day)
+        static string Get(int month, int day)
         {
             switch (month)
             {
