@@ -43,7 +43,6 @@ namespace guess_number
                 MessageBox.Show($"請按開始");
             }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (myList?.Count != null && textBox1.Text.Length == 4 && int.TryParse(textBox1.Text, out int result))
@@ -66,8 +65,6 @@ namespace guess_number
                     }
                     return false;
                 });
-
-
                 if (A == textBox1.Text.Length)
                 {
 
@@ -77,22 +74,18 @@ namespace guess_number
                 {
                     label3.Text += $"{A}A{B}B\n";
                 }
-
             }
             else
             {
                 MessageBox.Show($"請按開始並輸入有效值");
             }
         }
-
-
         private void button4_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
             myList.Clear();
             textBox1.Text = "";
             label3.Text = "";
-
         }
     }
 }
